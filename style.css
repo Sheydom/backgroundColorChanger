@@ -1,0 +1,98 @@
+*{
+    margin: 0;
+    padding: 0;
+
+}
+
+body{
+   display: flex;
+   margin: auto;
+   justify-content: center;
+   align-items: center; 
+   background-color: skyblue;
+   
+}
+
+
+
+#colorbody{
+    margin-top: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 300px;
+    background-color: aqua;
+    border-radius: 20px 20px 20px 20px;
+    border: 2px solid black;
+}
+
+
+
+
+
+
+#title{
+    display: flex;
+    justify-content: center;
+    background-color: aqua;
+    width: 100%;
+    border-radius: 20px 20px 0 0;
+
+}
+
+
+#inffield{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    border: 2px solid black;
+    padding-bottom: 5px;
+    padding-top: 5px;
+}
+
+#buttons{
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    border-radius: 0 0 20px 20px;
+    padding: 5px 0;
+}
+
+#buttons button{
+    cursor: pointer;
+    padding: 5px;
+    animation: shake 0.8s ease-in-out;
+    
+}
+
+
+#buttons button:hover{
+    animation-iteration-count: infinite;
+    
+}
+
+
+.button{
+    transition:  ease-in-out 0.5s;
+    animation-iteration-count: infinite;
+    border-radius: 5px;
+}
+
+ 
+
+
+#newcolor{
+    display: flex;
+    justify-content: center;
+    font-weight: bold;
+    padding-top: 5px;
+}
+
+@keyframes shake {
+    0% {transform:translateX(0);}
+    25% {transform: translate(-5px);}
+    50% {transform: translateX(+5px);}
+    75% {transform: translateX(-5px);}
+    100%{transform: translateX(0);}
+}
