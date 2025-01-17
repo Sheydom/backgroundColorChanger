@@ -20,7 +20,7 @@ body{
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    width: 300px;
+    width: 310px;
     background-color: aqua;
     border-radius: 20px 20px 20px 20px;
     border: 2px solid black;
@@ -47,6 +47,10 @@ body{
     border: 2px solid black;
     padding-bottom: 5px;
     padding-top: 5px;
+}
+
+#inffield p{
+    padding: 0 5px;
 }
 
 #buttons{

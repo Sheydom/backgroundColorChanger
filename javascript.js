@@ -1,3 +1,6 @@
+const textElements = document.querySelectorAll("h1, h2, h3, h4, h5, h6, p, span, li, a");
+textElements.forEach((element)=>element.style.fontFamily="Roboto", "sans-serif")
+
 
 let body = document.body;
 let background = window.getComputedStyle(body);
@@ -10,9 +13,6 @@ const elements = document.querySelectorAll(".button");
 
 const color = ["yellow","green","blue","red", "orange", "purple", "pink", "black",];
 const defaultColor = "white";
-
-
-
 
 
 newcolor.innerText = defaultColor.toUpperCase();
