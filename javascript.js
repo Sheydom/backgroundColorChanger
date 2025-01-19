@@ -1,5 +1,5 @@
-const textElements = document.querySelectorAll("h1, h2, h3, h4, h5, h6, p, span, li, a");
-textElements.forEach((element)=>element.style.fontFamily="Roboto", "sans-serif")
+const textElements = document.querySelectorAll("h1, h2, h3, h4, h5, h6, p, span, li, a, button");
+textElements.forEach((element)=>element.style.fontFamily="Roboto, Sans-serif")
 
 
 let body = document.body;
@@ -11,8 +11,16 @@ const reset = document.getElementById("reset");
 const hexb = document.getElementById("hexb");
 const elements = document.querySelectorAll(".button");
 
+const felements = document.querySelectorAll(".fbutton");
+const font = document.getElementById("font");
+const freset = document.getElementById("freset");
+const auto = document.getElementById("auto");
+
 const color = ["yellow","green","blue","red", "orange", "purple", "pink", "black",];
 const defaultColor = "white";
+const defaultFont = "Roboto, Sans-serif";
+
+
 
 
 newcolor.innerText = defaultColor.toUpperCase();
@@ -52,7 +60,7 @@ function hchange (){
 hexb.addEventListener("click",hchange);
 
 elements.forEach(element =>{
-    let intervalID;
+    // let intervalID;
 
 
 element.addEventListener("mouseover",()=>{
@@ -75,11 +83,40 @@ element.addEventListener("mouseover",()=>{
         {clearInterval(intervalID);
         element.style.backgroundColor = "white";
          });
+ });
 
+
+
+    function fontchange (){
+    const fontc =["Comic Neue","Chewy","Pacifico","Fredoka One","Lobster","Caveat"];
+    let fontindex = Math.floor(Math.random()*fontc.length);
+    font.style.fontFamily = fontc[fontindex];
+};
+
+    font.addEventListener("click",fontchange);
 
     
 
- });
+function autofunction(){
+     
+    intervalID2=setInterval(()=>{
+        const fontc =["Comic Neue","Chewy","Pacifico","Fredoka One","Lobster","Caveat"];
+        let fontindex = Math.floor(Math.random()*fontc.length);
+        textElements.forEach((element) =>element.style.fontFamily = fontc[fontindex]);
+        },1000);
+
+       
+        
+
+    }
+ freset.addEventListener("click",()=>{clearInterval(intervalID2)
+        textElements.forEach((element)=>element.style.fontFamily=defaultFont); 
+        });
+
+
+
+    auto.addEventListener("click",autofunction);
+
 
 
 

@@ -10,6 +10,8 @@ body{
    justify-content: center;
    align-items: center; 
    background-color: white;
+   font-size: 16px;
+   line-height: 1.5; 
 }
 
 
@@ -53,7 +55,7 @@ body{
     padding: 0 5px;
 }
 
-#buttons{
+#buttons, #fbuttons{
     width: 100%;
     display: flex;
     justify-content: space-around;
@@ -66,6 +68,11 @@ body{
     padding: 5px;
     animation: shake 0.8s ease-in-out;
     
+}
+
+#fbuttons button{
+    cursor: pointer;
+    padding: 5px;
 }
 
 
