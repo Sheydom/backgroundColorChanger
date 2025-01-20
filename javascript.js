@@ -1,4 +1,4 @@
-const textElements = document.querySelectorAll("h1, h2, h3, h4, h5, h6, p, span, li, a, button");
+const textElements = document.querySelectorAll("h1, h2, h3, h4, h5, h6, p, span, li, a, button, label");
 textElements.forEach((element)=>element.style.fontFamily="Roboto, Sans-serif")
 
 
@@ -12,15 +12,15 @@ const hexb = document.getElementById("hexb");
 const elements = document.querySelectorAll(".button");
 
 const felements = document.querySelectorAll(".fbutton");
-const font = document.getElementById("font");
+const dropdown = document.getElementById("dropdown");
 const freset = document.getElementById("freset");
 const auto = document.getElementById("auto");
 
 const color = ["yellow","green","blue","red", "orange", "purple", "pink", "black",];
 const defaultColor = "white";
 const defaultFont = "Roboto, Sans-serif";
-
-
+const options =["Comic Neue","Chewy","Pacifico","Fredoka One","Lobster","Caveat"];
+intervalID2 = null;
 
 
 newcolor.innerText = defaultColor.toUpperCase();
@@ -60,7 +60,6 @@ function hchange (){
 hexb.addEventListener("click",hchange);
 
 elements.forEach(element =>{
-    // let intervalID;
 
 
 element.addEventListener("mouseover",()=>{
@@ -86,18 +85,30 @@ element.addEventListener("mouseover",()=>{
  });
 
 
+ // ------------function for fontchange via font button ---------------
 
-    function fontchange (){
-    const fontc =["Comic Neue","Chewy","Pacifico","Fredoka One","Lobster","Caveat"];
-    let fontindex = Math.floor(Math.random()*fontc.length);
-    font.style.fontFamily = fontc[fontindex];
-};
+     function fontchange (){
+    
+     let fontindex = Math.floor(Math.random()*options.length);
+     textElements.forEach((element)=>element.style.fontFamily=options[fontindex]);
+ };
 
-    font.addEventListener("click",fontchange);
+     dropdown.addEventListener("change",fontchange);
 
     
+    options.forEach(option=>{
+        let opt = document.createElement("option");
+        opt.value = option;
+        opt.textContent = option;
+        dropdown.appendChild(opt);
+    })
+
+
+
 
 function autofunction(){
+    
+        clearInterval(intervalID2);
      
     intervalID2=setInterval(()=>{
         const fontc =["Comic Neue","Chewy","Pacifico","Fredoka One","Lobster","Caveat"];
@@ -109,7 +120,8 @@ function autofunction(){
         
 
     }
- freset.addEventListener("click",()=>{clearInterval(intervalID2)
+ freset.addEventListener("click",()=>{
+    clearInterval(intervalID2);
         textElements.forEach((element)=>element.style.fontFamily=defaultFont); 
         });
 
