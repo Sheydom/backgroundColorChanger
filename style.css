@@ -26,7 +26,9 @@ body{
     background-color: aqua;
     border-radius: 20px 20px 20px 20px;
     border: 2px solid black;
+    text-align: center;
 }
+
 
 
 
@@ -36,6 +38,7 @@ body{
 #title{
     display: flex;
     justify-content: center;
+    text-align: center;
     width: 100%;
     border-radius: 20px 20px 0 0;
 
@@ -88,7 +91,12 @@ body{
     border-radius: 5px;
 }
 
- 
+    #newfont{
+        display: flex;
+        justify-content: center;
+        font-weight: bold;
+        padding-top: 5px;
+    }
 
 
 #newcolor{

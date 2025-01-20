@@ -6,7 +6,7 @@ let body = document.body;
 let background = window.getComputedStyle(body);
 let backgroundColor = background.backgroundColor;
 let newcolor = document.getElementById("newcolor");
-const click = document.getElementById("click");
+const dropdown1 = document.getElementById("dropdown1");
 const reset = document.getElementById("reset");
 const hexb = document.getElementById("hexb");
 const elements = document.querySelectorAll(".button");
@@ -19,21 +19,30 @@ const auto = document.getElementById("auto");
 const color = ["yellow","green","blue","red", "orange", "purple", "pink", "black",];
 const defaultColor = "white";
 const defaultFont = "Roboto, Sans-serif";
-const options =["Comic Neue","Chewy","Pacifico","Fredoka One","Lobster","Caveat"];
+const options =["Comic Neue","Chewy","Pacifico","Fredoka One","Lobster","Caveat", "Roboto"];
 intervalID2 = null;
 
 
 newcolor.innerText = defaultColor.toUpperCase();
 
 
+color.forEach(col=>{
+    let co = document.createElement("option");
+    co.value=col;
+    co.textContent=col;
+    dropdown1.appendChild(co);
+
+})
+
+
+
 function colorChange (){
-    const colorindex = Math.floor(Math.random() * color.length);
-    document.body.style.backgroundColor = color[colorindex];
-    currentColor = color[colorindex].toUpperCase();
+    document.body.style.backgroundColor = dropdown1.value;
+    currentColor = dropdown1.value.toUpperCase();
     newcolor.innerText = currentColor;
 }
 
-click.addEventListener("click", colorChange);
+dropdown1.addEventListener("change", colorChange);
 
 reset.addEventListener("click", ()=>{document.body.style.backgroundColor = defaultColor;
      newcolor.innerText= defaultColor.toUpperCase();
@@ -58,7 +67,7 @@ function hchange (){
 }
 
 hexb.addEventListener("click",hchange);
-
+//--------------------------------- mouse hover color chonge-----------------------------------------------------------
 elements.forEach(element =>{
 
 
@@ -85,15 +94,9 @@ element.addEventListener("mouseover",()=>{
  });
 
 
- // ------------function for fontchange via font button ---------------
+ // ------------function for fontchange via dropdown button ---------------
 
-     function fontchange (){
-    
-     let fontindex = Math.floor(Math.random()*options.length);
-     textElements.forEach((element)=>element.style.fontFamily=options[fontindex]);
- };
 
-     dropdown.addEventListener("change",fontchange);
 
     
     options.forEach(option=>{
@@ -101,8 +104,21 @@ element.addEventListener("mouseover",()=>{
         opt.value = option;
         opt.textContent = option;
         dropdown.appendChild(opt);
+        return opt;
     })
 
+
+
+
+
+
+
+    function fontchange (){
+        textElements.forEach((element)=>element.style.fontFamily=dropdown.value);
+        newfont.innerText=dropdown.value;
+ };
+
+     dropdown.addEventListener("change",fontchange);
 
 
 
@@ -122,7 +138,8 @@ function autofunction(){
     }
  freset.addEventListener("click",()=>{
     clearInterval(intervalID2);
-        textElements.forEach((element)=>element.style.fontFamily=defaultFont); 
+        textElements.forEach((element)=>element.style.fontFamily=defaultFont);
+        newfont.innerText=defaultFont; 
         });
 
 
