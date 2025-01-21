@@ -70,13 +70,14 @@ body{
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    width: 310px;
+    width: 320px;
     background-color: aqua;
     border-radius: 20px 20px 20px 20px;
     border: 2px solid black;
     text-align: center;
     /* font-size: 16px; */
-    height: fit-content;    
+    height: fit-content;  
+    /* padding: 10px;   */
 }
 
 
@@ -119,21 +120,36 @@ body{
 #inffield p{
     padding: 0 5px;
 }
-
-#buttons, #fbuttons{
+#buttons{
+    padding-top: 5px;
+}
+#buttons, #fbuttons,#fcbuttons{
     width: 100%;
     display: flex;
-    justify-content: space-around;
     border-radius: 0 0 20px 20px;
-    padding: 5px 0;
     align-items: center;
+    justify-content: space-between;
+
 }
+
+
+#buttons label, #fbuttons label,#fcbuttons label{
+   text-align: right;
+   width: 85px;
+   max-width: 85px;
+   padding: 2px;
+
+
+}
+
 
 #buttons button{
     cursor: pointer;
     padding: 2px;
     animation: shake 0.8s ease-in-out;
     height: max-content;
+    margin-right: 5px;
+
     
 }
 
@@ -141,9 +157,23 @@ body{
     cursor: pointer;
     padding: 2px;
     height: max-content;
+    margin-right: 5px;
+
 }
 
-#dropdown1,#dropdown{
+#fcbuttons button{
+    cursor: pointer;
+    padding: 2px;
+    height: max-content;
+    margin-right: 5px;
+}
+
+
+#fcbuttons{
+    padding-bottom: 5px;
+}
+
+#dropdown1,#dropdown,#dropdown2{
     height: max-content;
 }
 
@@ -209,12 +239,6 @@ body{
     #fbuttons button{
         padding: 0;
     }
-
-    
-    /* #lbody,#rbody{
-        width: fit-content;
-        font-size: 12px;
-    } */
 
     body{
         font-size: 16px;

@@ -1,5 +1,5 @@
 
-const options =["Roboto","Comic Neue","Chewy","Pacifico","Fredoka One","Lobster","Caveat", ];
+const options =["Roboto","Comic Neue","Chewy","Pacifico","Fredoka One","Lobster","Caveat"];
 const googleFontsLink = document.createElement('link');
 googleFontsLink.rel = 'stylesheet';
 googleFontsLink.href = `https://fonts.googleapis.com/css2?family=${options.join('&family=')}&display=swap`;
@@ -36,6 +36,7 @@ const felements = document.querySelectorAll(".fbutton");
 const dropdown = document.getElementById("dropdown");
 const freset = document.getElementById("freset");
 const auto = document.getElementById("auto");
+const dropdown2 = document.getElementById("dropdown2");
 
 const color = ["white","yellow","green","blue","red", "orange", "purple", "pink", "black",];
 const defaultColor = "white";
@@ -43,7 +44,7 @@ const defaultFont = "Roboto";
 
 intervalID2 = null;
 
-
+dropdown2.value ="black";
 newcolor.innerText = defaultColor.toUpperCase();
 newfont.innerText= defaultFont;   
 
@@ -64,7 +65,17 @@ function colorChange (){
     newcolor.innerText = currentColor;
 }
 
-dropdown1.addEventListener("change", colorChange);
+
+//-----------------dropdown eventlistener background color ----------------------
+
+
+dropdown1.addEventListener("change", ()=>{
+    if(dropdown2.value === dropdown1.value){
+        alert("Please change background color");
+        dropdown1.value = "";
+    }
+    
+    colorChange()});
 
 
 //----------------------------------color reset-----------------------------------------------------
@@ -129,7 +140,7 @@ element.addEventListener("mouseover",()=>{
         opt.value = option;
         opt.textContent = option;
         dropdown.appendChild(opt);
-        return opt;
+        // return opt;
     })
 
 
@@ -175,4 +186,31 @@ function autofunction(){
 
 
 
+//----------------font color dropdown-----------------------------------
 
+
+color.forEach(col => {
+    let nopt = document.createElement("option");
+    nopt.value = col;
+    nopt.textContent = col;
+    dropdown2.appendChild(nopt);
+})
+
+
+dropdown2.addEventListener("change",()=>{
+    if(dropdown2.value === dropdown1.value){
+        alert("Please change font color");
+        dropdown2.value = "";
+    }
+
+    telements.forEach((telement)=>{
+        telement.style.color= dropdown2.value;
+    })
+   
+})
+
+
+// fcreset.addEventListener("click", ()=>{document.body.style.backgroundColor = defaultColor;
+//     newcolor.innerText= defaultColor.toUpperCase();
+//     dropdown1.value="white"
+// });
