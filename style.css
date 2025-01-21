@@ -10,14 +10,55 @@ body{
    justify-content: center;
    align-items: center; 
    background-color: white;
-   font-size: 16px;
    line-height: 1.5; 
+   margin-top: 300px;
 }
 
 
+#gui{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.f16{
+    font-size: 16px;
+}
+.f18{
+    font-size: 18px;
+}
+
+.f24{
+    font-size: 24px;
+}
+
+.f30{
+    font-size: 30px;
+}
+
+.f36{
+    font-size: 36px;
+}
+
+.f42{
+    font-size:42px;
+}
+
+.f48{
+    font-size: 48px;
+}
+
+
+.f60{
+    font-size: 60px;
+}
+
+.f72{
+    font-size: 72px;
+}
+
 
 #colorbody{
-    margin-top: 300px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -27,10 +68,23 @@ body{
     border-radius: 20px 20px 20px 20px;
     border: 2px solid black;
     text-align: center;
+    font-size: 16px;
+    height: fit-content;    
 }
 
 
+#lbody{
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+}
 
+
+#rbody{
+    display: flex;
+    align-items: flex-end;
+    flex-direction: column;
+}
 
 
 

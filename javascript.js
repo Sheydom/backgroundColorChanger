@@ -1,6 +1,27 @@
-const textElements = document.querySelectorAll("h1, h2, h3, h4, h5, h6, p, span, li, a, button, label");
-textElements.forEach((element)=>element.style.fontFamily="Roboto, Sans-serif")
 
+const options =["Roboto","Comic Neue","Chewy","Pacifico","Fredoka One","Lobster","Caveat", ];
+const googleFontsLink = document.createElement('link');
+googleFontsLink.rel = 'stylesheet';
+googleFontsLink.href = `https://fonts.googleapis.com/css2?family=${options.join('&family=')}&display=swap`;
+document.head.appendChild(googleFontsLink);
+
+const lbody = document.getElementById("lbody");
+const rbody = document.getElementById("rbody");
+
+const telements = document.querySelectorAll("#lbody,#rbody");
+telements.forEach((telement)=>telement.style.fontFamily="Roboto");
+
+
+// for changing all element on the body
+// const textElements = document.querySelectorAll("h1, h2, h3, h4, h5, h6, p, span, li, a, button, label");
+// textElements.forEach((element)=>element.style.fontFamily="Roboto")
+
+
+
+
+
+const colorbody = document.getElementById("colorbody");
+colorbody.style.fontFamily="Roboto"
 
 let body = document.body;
 let background = window.getComputedStyle(body);
@@ -16,14 +37,15 @@ const dropdown = document.getElementById("dropdown");
 const freset = document.getElementById("freset");
 const auto = document.getElementById("auto");
 
-const color = ["yellow","green","blue","red", "orange", "purple", "pink", "black",];
+const color = ["white","yellow","green","blue","red", "orange", "purple", "pink", "black",];
 const defaultColor = "white";
-const defaultFont = "Roboto, Sans-serif";
-const options =["Comic Neue","Chewy","Pacifico","Fredoka One","Lobster","Caveat", "Roboto"];
+const defaultFont = "Roboto";
+
 intervalID2 = null;
 
 
 newcolor.innerText = defaultColor.toUpperCase();
+newfont.innerText= defaultFont;   
 
 
 color.forEach(col=>{
@@ -114,7 +136,7 @@ element.addEventListener("mouseover",()=>{
 
 
     function fontchange (){
-        textElements.forEach((element)=>element.style.fontFamily=dropdown.value);
+        telements.forEach((telement)=>telement.style.fontFamily=dropdown.value);
         newfont.innerText=dropdown.value;
  };
 
@@ -129,7 +151,7 @@ function autofunction(){
     intervalID2=setInterval(()=>{
         const fontc =["Comic Neue","Chewy","Pacifico","Fredoka One","Lobster","Caveat"];
         let fontindex = Math.floor(Math.random()*fontc.length);
-        textElements.forEach((element) =>element.style.fontFamily = fontc[fontindex]);
+        telements.forEach((telement) =>telement.style.fontFamily = fontc[fontindex]);
         },1000);
 
        
@@ -138,7 +160,7 @@ function autofunction(){
     }
  freset.addEventListener("click",()=>{
     clearInterval(intervalID2);
-        textElements.forEach((element)=>element.style.fontFamily=defaultFont);
+        telements.forEach((telement)=>telement.style.fontFamily=defaultFont);
         newfont.innerText=defaultFont; 
         });
 
