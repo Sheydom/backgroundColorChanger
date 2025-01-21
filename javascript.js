@@ -66,8 +66,11 @@ function colorChange (){
 
 dropdown1.addEventListener("change", colorChange);
 
+
+//----------------------------------color reset-----------------------------------------------------
 reset.addEventListener("click", ()=>{document.body.style.backgroundColor = defaultColor;
      newcolor.innerText= defaultColor.toUpperCase();
+     dropdown1.value="white"
 });
 
 
@@ -155,13 +158,14 @@ function autofunction(){
         },1000);
 
        
-        
+     //------------------------fontreset button----------------------   
 
     }
  freset.addEventListener("click",()=>{
     clearInterval(intervalID2);
         telements.forEach((telement)=>telement.style.fontFamily=defaultFont);
         newfont.innerText=defaultFont; 
+        dropdown.value="Roboto";
         });
 
 

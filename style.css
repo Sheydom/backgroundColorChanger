@@ -11,51 +11,58 @@ body{
    align-items: center; 
    background-color: white;
    line-height: 1.5; 
-   margin-top: 300px;
+   font-size: 16px;
+   
 }
 
 
 #gui{
+    margin-top: 300px;
     width: 100%;
     display: flex;
     justify-content: center;
 }
 
-.f16{
-    font-size: 16px;
-}
-.f18{
-    font-size: 18px;
-}
-
-.f24{
-    font-size: 24px;
-}
-
-.f30{
-    font-size: 30px;
-}
-
-.f36{
-    font-size: 36px;
-}
-
-.f42{
-    font-size:42px;
-}
-
-.f48{
-    font-size: 48px;
-}
 
 
-.f60{
-    font-size: 60px;
+
+
+.f16 {
+    font-size: 1rem; /* 16px / 16 = 1rem */
 }
 
-.f72{
-    font-size: 72px;
+.f18 {
+    font-size: 1.125rem; /* 18px / 16 = 1.125rem */
 }
+
+.f24 {
+    font-size: 1.5rem; /* 24px / 16 = 1.5rem */
+}
+
+.f30 {
+    font-size: 1.875rem; /* 30px / 16 = 1.875rem */
+}
+
+.f36 {
+    font-size: 2.25rem; /* 36px / 16 = 2.25rem */
+}
+
+.f42 {
+    font-size: 2.625rem; /* 42px / 16 = 2.625rem */
+}
+
+.f48 {
+    font-size: 3rem; /* 48px / 16 = 3rem */
+}
+
+.f60 {
+    font-size: 3.75rem; /* 60px / 16 = 3.75rem */
+}
+
+.f72 {
+    font-size: 4.5rem; /* 72px / 16 = 4.5rem */
+}
+
 
 
 #colorbody{
@@ -68,7 +75,7 @@ body{
     border-radius: 20px 20px 20px 20px;
     border: 2px solid black;
     text-align: center;
-    font-size: 16px;
+    /* font-size: 16px; */
     height: fit-content;    
 }
 
@@ -77,6 +84,7 @@ body{
     display: flex;
     align-items: flex-start;
     flex-direction: column;
+    flex-wrap: nowrap;
 }
 
 
@@ -118,18 +126,25 @@ body{
     justify-content: space-around;
     border-radius: 0 0 20px 20px;
     padding: 5px 0;
+    align-items: center;
 }
 
 #buttons button{
     cursor: pointer;
-    padding: 5px;
+    padding: 2px;
     animation: shake 0.8s ease-in-out;
+    height: max-content;
     
 }
 
 #fbuttons button{
     cursor: pointer;
-    padding: 5px;
+    padding: 2px;
+    height: max-content;
+}
+
+#dropdown1,#dropdown{
+    height: max-content;
 }
 
 
@@ -166,4 +181,55 @@ body{
     50% {transform: translateX(+5px);}
     75% {transform: translateX(-5px);}
     100%{transform: translateX(0);}
+}
+
+
+
+@media(max-width:960px){
+
+    #title{
+        flex-direction: c;
+    }
+
+    #gui{
+        display: flex;
+        flex-direction: column;
+        margin-top: 0;
+        align-items: center;
+    }
+
+    #dropdown{
+        width: fit-content;
+    }
+
+    #buttons button{
+        padding: 0;
+    }
+
+    #fbuttons button{
+        padding: 0;
+    }
+
+    
+    /* #lbody,#rbody{
+        width: fit-content;
+        font-size: 12px;
+    } */
+
+    body{
+        font-size: 16px;
+        line-height: 1;
+    }
+}
+
+@media (max-width: 960px) {
+    .f16 { font-size: 0.875rem; }
+    .f18 { font-size: 1rem; }
+    .f24 { font-size: 1.25rem; }
+    .f30 { font-size: 1.5625rem; }
+    .f36 { font-size: 1.875rem; }
+    .f42 { font-size: 2.1875rem; }
+    .f48 { font-size: 2.5rem; }
+    .f60 { font-size: 3.125rem; }
+    .f72 { font-size: 3.75rem; }
 }
