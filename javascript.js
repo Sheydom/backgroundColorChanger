@@ -27,6 +27,7 @@ let body = document.body;
 let background = window.getComputedStyle(body);
 let backgroundColor = background.backgroundColor;
 let newcolor = document.getElementById("newcolor");
+
 const dropdown1 = document.getElementById("dropdown1");
 const reset = document.getElementById("reset");
 const hexb = document.getElementById("hexb");
@@ -41,6 +42,20 @@ const dropdown2 = document.getElementById("dropdown2");
 const color = ["white","yellow","green","blue","red", "orange", "purple", "pink", "black",];
 const defaultColor = "white";
 const defaultFont = "Roboto";
+let previousValue2 = "black";
+let previousValue1 = "white";
+document.addEventListener("DOMContentLoaded",()=>{
+    dropdown2.value="black";
+})
+
+
+
+document.addEventListener("DOMContentLoaded",()=>{
+    dropdown1.value="white";
+})
+
+
+
 
 intervalID2 = null;
 
@@ -72,10 +87,11 @@ function colorChange (){
 dropdown1.addEventListener("change", ()=>{
     if(dropdown2.value === dropdown1.value){
         alert("Please change background color");
-        dropdown1.value = "";
+        dropdown1.value = previousValue1;
     }
-    
-    colorChange()});
+    else { previousValue1 = dropdown1.value;
+        colorChange()}
+    });
 
 
 //----------------------------------color reset-----------------------------------------------------
@@ -189,6 +205,8 @@ function autofunction(){
 //----------------font color dropdown-----------------------------------
 
 
+
+
 color.forEach(col => {
     let nopt = document.createElement("option");
     nopt.value = col;
@@ -198,16 +216,23 @@ color.forEach(col => {
 
 
 dropdown2.addEventListener("change",()=>{
+    
+
     if(dropdown2.value === dropdown1.value){
         alert("Please change font color");
-        dropdown2.value = "";
+        dropdown2.value = previousValue2;
     }
+    else{
 
+    previousValue2=dropdown2.value;
     telements.forEach((telement)=>{
         telement.style.color= dropdown2.value;
     })
-   
-})
+    }
+});
+
+
+
 
 
 // fcreset.addEventListener("click", ()=>{document.body.style.backgroundColor = defaultColor;

@@ -229,7 +229,7 @@ body{
     }
 
     #dropdown{
-        width: fit-content;
+        width: 50px;
     }
 
     #buttons button{
