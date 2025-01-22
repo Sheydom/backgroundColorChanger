@@ -191,7 +191,9 @@ function autofunction(){
     }
  freset.addEventListener("click",()=>{
     clearInterval(intervalID2);
-        telements.forEach((telement)=>telement.style.fontFamily=defaultFont);
+        telements.forEach((telement)=>{telement.style.fontFamily=defaultFont;
+        telement.style.fontStyle="normal";
+        telement.style.fontWeight="normal"})
         newfont.innerText=defaultFont; 
         dropdown.value="Roboto";
         });
