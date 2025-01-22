@@ -12,12 +12,6 @@ const telements = document.querySelectorAll("#lbody,#rbody");
 telements.forEach((telement)=>telement.style.fontFamily="Roboto");
 
 
-// for changing all element on the body
-// const textElements = document.querySelectorAll("h1, h2, h3, h4, h5, h6, p, span, li, a, button, label");
-// textElements.forEach((element)=>element.style.fontFamily="Roboto")
-
-
-
 
 
 const colorbody = document.getElementById("colorbody");
@@ -40,6 +34,8 @@ const auto = document.getElementById("auto");
 const dropdown2 = document.getElementById("dropdown2");
 const fcreset = document.getElementById("fcreset");
 const fcauto = document.getElementById("fcauto");
+const it = document.getElementById("it");
+const bo = document.getElementById("bo");
 
 const color = ["white","yellow","green","blue","red", "orange", "purple", "pink", "black",];
 const defaultColor = "white";
@@ -190,8 +186,7 @@ function autofunction(){
         telements.forEach((telement) =>telement.style.fontFamily = fontc[fontindex]);
         },1000);
 
-       
-     //------------------------fontreset button----------------------   
+ 
 
     }
  freset.addEventListener("click",()=>{
@@ -270,3 +265,19 @@ fcauto.addEventListener("click",()=>{
     
         newfontc.innerHTML=newhexc;
 })
+
+
+
+//-------------------italic and bold button----------------------------
+it.addEventListener("click",()=>{
+    
+    telements.forEach((telement)=>{
+        telement.style.fontStyle=telement.style.fontStyle=== "italic"? "normal":"italic";
+    })
+});
+
+bo.addEventListener("click",()=>{
+     telements.forEach((telement)=>{
+       telement.style.fontWeight=telement.style.fontWeight=== "bold"? "normal":"bold";
+})
+});

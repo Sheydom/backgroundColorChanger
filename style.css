@@ -134,7 +134,7 @@ body{
 
 
 #buttons label, #fbuttons label,#fcbuttons label{
-   text-align: right;
+   text-align: left;
    width: 85px;
    max-width: 85px;
    padding: 2px;
@@ -168,6 +168,16 @@ body{
     margin-right: 5px;
 }
 
+#it,#bo{
+    cursor: pointer;
+    padding: 2px;
+    height: max-content;
+
+}
+
+#it{
+    margin-left: 5px;
+}
 
 #fcbuttons{
     padding-bottom: 5px;
@@ -176,8 +186,8 @@ body{
 #dropdown1,#dropdown,#dropdown2{
     height: max-content;
     max-width: 310px;
-    margin: 10  auto;
     display: block;
+    cursor: pointer;
 }
 
 
