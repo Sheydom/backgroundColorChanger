@@ -38,12 +38,18 @@ const dropdown = document.getElementById("dropdown");
 const freset = document.getElementById("freset");
 const auto = document.getElementById("auto");
 const dropdown2 = document.getElementById("dropdown2");
+const fcreset = document.getElementById("fcreset");
+const fcauto = document.getElementById("fcauto");
 
 const color = ["white","yellow","green","blue","red", "orange", "purple", "pink", "black",];
 const defaultColor = "white";
 const defaultFont = "Roboto";
 let previousValue2 = "black";
 let previousValue1 = "white";
+let newfontc = document.getElementById("newfontc");
+
+
+
 document.addEventListener("DOMContentLoaded",()=>{
     dropdown2.value="black";
 })
@@ -61,8 +67,8 @@ intervalID2 = null;
 
 dropdown2.value ="black";
 newcolor.innerText = defaultColor.toUpperCase();
-newfont.innerText= defaultFont;   
-
+newfont.innerText= defaultFont;
+newfontc.innerText = "BLACK";   
 
 color.forEach(col=>{
     let co = document.createElement("option");
@@ -86,7 +92,7 @@ function colorChange (){
 
 dropdown1.addEventListener("change", ()=>{
     if(dropdown2.value === dropdown1.value){
-        alert("Please change background color");
+        alert(" Background color cannot match Font color. Please change background color");
         dropdown1.value = previousValue1;
     }
     else { previousValue1 = dropdown1.value;
@@ -219,7 +225,7 @@ dropdown2.addEventListener("change",()=>{
     
 
     if(dropdown2.value === dropdown1.value){
-        alert("Please change font color");
+        alert("Font color cannot match background Color. Please change font color");
         dropdown2.value = previousValue2;
     }
     else{
@@ -229,13 +235,38 @@ dropdown2.addEventListener("change",()=>{
         telement.style.color= dropdown2.value;
     })
     }
+
+    newfontc.innerHTML=dropdown2.value;
 });
 
 
 
+//--------fcreset -----------------------------------
 
+ fcreset.addEventListener("click", ()=>{
+    dropdown2.value="black";
+    telements.forEach(telement=>telement.style.color=dropdown2.value);
+    newfontc.innerHTML=dropdown2.value.toUpperCase();
+});
 
-// fcreset.addEventListener("click", ()=>{document.body.style.backgroundColor = defaultColor;
-//     newcolor.innerText= defaultColor.toUpperCase();
-//     dropdown1.value="white"
-// });
+//-----------------fcauto--------------------
+
+fcauto.addEventListener("click",()=>{
+  
+        const hash = "#";
+        const hexcode = "123456789ABCDEF"
+        
+        let hexc ="";
+        for(let i=0; i<6; i++){
+            let hindex = Math.floor(Math.random()*hexcode.length);
+            hexc += hexcode.charAt(hindex);
+        }
+
+        newhexc = hash+hexc;
+
+        telements.forEach((telement)=>{
+            telement.style.color=newhexc;
+        })
+    
+        newfontc.innerHTML=newhexc;
+})

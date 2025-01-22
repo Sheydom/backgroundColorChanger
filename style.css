@@ -175,6 +175,9 @@ body{
 
 #dropdown1,#dropdown,#dropdown2{
     height: max-content;
+    max-width: 310px;
+    margin: 10  auto;
+    display: block;
 }
 
 
@@ -228,9 +231,6 @@ body{
         align-items: center;
     }
 
-    #dropdown{
-        width: 50px;
-    }
 
     #buttons button{
         padding: 0;
@@ -239,6 +239,7 @@ body{
     #fbuttons button{
         padding: 0;
     }
+
 
     body{
         font-size: 16px;
