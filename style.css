@@ -83,16 +83,17 @@ body{
 
 #lbody{
     display: flex;
-    align-items: flex-start;
+    align-items: flex-end;
     flex-direction: column;
-    flex-wrap: nowrap;
+    margin-right: 10px;
 }
 
 
 #rbody{
     display: flex;
-    align-items: flex-end;
+    align-items: flex-start;
     flex-direction: column;
+    margin-left: 10px;
 }
 
 
