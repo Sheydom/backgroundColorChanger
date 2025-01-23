@@ -158,7 +158,6 @@ element.addEventListener("mouseover",()=>{
         opt.value = option;
         opt.textContent = option;
         dropdown.appendChild(opt);
-        // return opt;
     })
 
 
