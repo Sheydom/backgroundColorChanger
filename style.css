@@ -1,271 +1,276 @@
-*{
-    margin: 0;
-    padding: 0;
-
+* {
+  margin: 0;
+  padding: 0;
 }
 
-body{
-   display: flex;
-   margin: auto;
-   justify-content: center;
-   align-items: center; 
-   background-color: white;
-   line-height: 1.5; 
-   font-size: 16px;
-   
+body {
+  display: flex;
+  margin: auto;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+  line-height: 1.5;
+  font-size: 16px;
 }
 
-
-#gui{
-    margin-top: 300px;
-    width: 100%;
-    display: flex;
-    justify-content: center;
+#gui {
+  margin-top: 300px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
 }
-
-
-
-
 
 .f16 {
-    font-size: 1rem; /* 16px / 16 = 1rem */
+  font-size: 1rem; /* 16px / 16 = 1rem */
 }
 
 .f18 {
-    font-size: 1.125rem; /* 18px / 16 = 1.125rem */
+  font-size: 1.125rem; /* 18px / 16 = 1.125rem */
 }
 
 .f24 {
-    font-size: 1.5rem; /* 24px / 16 = 1.5rem */
+  font-size: 1.5rem; /* 24px / 16 = 1.5rem */
 }
 
 .f30 {
-    font-size: 1.875rem; /* 30px / 16 = 1.875rem */
+  font-size: 1.875rem; /* 30px / 16 = 1.875rem */
 }
 
 .f36 {
-    font-size: 2.25rem; /* 36px / 16 = 2.25rem */
+  font-size: 2.25rem; /* 36px / 16 = 2.25rem */
 }
 
 .f42 {
-    font-size: 2.625rem; /* 42px / 16 = 2.625rem */
+  font-size: 2.625rem; /* 42px / 16 = 2.625rem */
 }
 
 .f48 {
-    font-size: 3rem; /* 48px / 16 = 3rem */
+  font-size: 3rem; /* 48px / 16 = 3rem */
 }
 
 .f60 {
-    font-size: 3.75rem; /* 60px / 16 = 3.75rem */
+  font-size: 3.75rem; /* 60px / 16 = 3.75rem */
 }
 
 .f72 {
-    font-size: 4.5rem; /* 72px / 16 = 4.5rem */
+  font-size: 4.5rem; /* 72px / 16 = 4.5rem */
 }
 
-
-
-#colorbody{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    width: 320px;
-    background-color: aqua;
-    border-radius: 20px 20px 20px 20px;
-    border: 2px solid black;
-    text-align: center;
-    /* font-size: 16px; */
-    height: fit-content;  
-    /* padding: 10px;   */
+#colorbody {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 320px;
+  background-color: aqua;
+  border-radius: 20px 20px 20px 20px;
+  border: 2px solid black;
+  text-align: center;
+  /* font-size: 16px; */
+  height: fit-content;
+  /* padding: 10px;   */
 }
 
-
-#lbody{
-    display: flex;
-    align-items: flex-end;
-    flex-direction: column;
-    margin-right: 10px;
+#lbody {
+  display: flex;
+  align-items: flex-end;
+  flex-direction: column;
+  margin-right: 10px;
 }
 
-
-#rbody{
-    display: flex;
-    align-items: flex-start;
-    flex-direction: column;
-    margin-left: 10px;
+#rbody {
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+  margin-left: 10px;
 }
 
-
-
-
-#title{
-    display: flex;
-    justify-content: center;
-    text-align: center;
-    width: 100%;
-    border-radius: 20px 20px 0 0;
-
+#title {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  width: 100%;
+  border-radius: 20px 20px 0 0;
 }
 
-
-#inffield{
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    border: 2px solid black;
-    padding-bottom: 5px;
-    padding-top: 5px;
+#inffield {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  border: 2px solid black;
+  padding-bottom: 5px;
+  padding-top: 5px;
 }
 
-#inffield p{
-    padding: 0 5px;
+#inffield p {
+  padding: 0 5px;
 }
-#buttons{
-    padding-top: 5px;
+#buttons {
+  padding-top: 5px;
 }
-#buttons, #fbuttons,#fcbuttons{
-    width: 100%;
-    display: flex;
-    border-radius: 0 0 20px 20px;
-    align-items: center;
-    justify-content: space-between;
-
-}
-
-
-#buttons label, #fbuttons label,#fcbuttons label{
-   text-align: left;
-   width: 85px;
-   max-width: 85px;
-   padding: 2px;
-
-
+#buttons,
+#fbuttons,
+#fcbuttons {
+  width: 100%;
+  display: flex;
+  border-radius: 0 0 20px 20px;
+  align-items: center;
+  justify-content: space-between;
 }
 
-
-#buttons button{
-    cursor: pointer;
-    padding: 2px;
-    animation: shake 0.8s ease-in-out;
-    height: max-content;
-    margin-right: 5px;
-
-    
+#buttons label,
+#fbuttons label,
+#fcbuttons label {
+  text-align: left;
+  width: 85px;
+  max-width: 85px;
+  padding: 2px;
 }
 
-#fbuttons button{
-    cursor: pointer;
-    padding: 2px;
-    height: max-content;
-    margin-right: 5px;
-
+#buttons button {
+  cursor: pointer;
+  padding: 2px;
+  animation: shake 0.8s ease-in-out;
+  height: max-content;
+  margin-right: 5px;
 }
 
-#fcbuttons button{
-    cursor: pointer;
-    padding: 2px;
-    height: max-content;
-    margin-right: 5px;
+#fbuttons button {
+  cursor: pointer;
+  padding: 2px;
+  height: max-content;
+  margin-right: 5px;
 }
 
-#it,#bo{
-    cursor: pointer;
-    padding: 2px;
-    height: max-content;
-
+#fcbuttons button {
+  cursor: pointer;
+  padding: 2px;
+  height: max-content;
+  margin-right: 5px;
 }
 
-#it{
-    margin-left: 5px;
+#it,
+#bo {
+  cursor: pointer;
+  padding: 2px;
+  height: max-content;
 }
 
-#fcbuttons{
-    padding-bottom: 5px;
+#it {
+  margin-left: 5px;
 }
 
-#dropdown1,#dropdown,#dropdown2{
-    height: max-content;
-    max-width: 310px;
-    display: block;
-    cursor: pointer;
+#fcbuttons {
+  padding-bottom: 5px;
 }
 
-
-#buttons button:hover{
-    animation-iteration-count: infinite;
-    
+#dropdown1,
+#dropdown,
+#dropdown2 {
+  height: max-content;
+  max-width: 310px;
+  display: block;
+  cursor: pointer;
 }
 
-
-.button{
-    transition:  ease-in-out 0.5s;
-    animation-iteration-count: infinite;
-    border-radius: 5px;
+#dropdown2:focus {
+  background-color: "white";
 }
 
-    #newfont{
-        display: flex;
-        justify-content: center;
-        font-weight: bold;
-        padding-top: 5px;
-    }
+#buttons button:hover {
+  animation-iteration-count: infinite;
+}
 
+.button {
+  transition: ease-in-out 0.5s;
+  animation-iteration-count: infinite;
+  border-radius: 5px;
+}
 
-#newcolor{
-    display: flex;
-    justify-content: center;
-    font-weight: bold;
-    padding-top: 5px;
+#newfont {
+  display: flex;
+  justify-content: center;
+  font-weight: bold;
+  padding-top: 5px;
+}
+
+#newcolor {
+  display: flex;
+  justify-content: center;
+  font-weight: bold;
+  padding-top: 5px;
 }
 
 @keyframes shake {
-    0% {transform:translateX(0);}
-    25% {transform: translate(-5px);}
-    50% {transform: translateX(+5px);}
-    75% {transform: translateX(-5px);}
-    100%{transform: translateX(0);}
-}
-
-
-
-@media(max-width:960px){
-
-    #title{
-        flex-direction: c;
-    }
-
-    #gui{
-        display: flex;
-        flex-direction: column;
-        margin-top: 0;
-        align-items: center;
-    }
-
-
-    #buttons button{
-        padding: 0;
-    }
-
-    #fbuttons button{
-        padding: 0;
-    }
-
-
-    body{
-        font-size: 16px;
-        line-height: 1;
-    }
+  0% {
+    transform: translateX(0);
+  }
+  25% {
+    transform: translate(-5px);
+  }
+  50% {
+    transform: translateX(+5px);
+  }
+  75% {
+    transform: translateX(-5px);
+  }
+  100% {
+    transform: translateX(0);
+  }
 }
 
 @media (max-width: 960px) {
-    .f16 { font-size: 0.875rem; }
-    .f18 { font-size: 1rem; }
-    .f24 { font-size: 1.25rem; }
-    .f30 { font-size: 1.5625rem; }
-    .f36 { font-size: 1.875rem; }
-    .f42 { font-size: 2.1875rem; }
-    .f48 { font-size: 2.5rem; }
-    .f60 { font-size: 3.125rem; }
-    .f72 { font-size: 3.75rem; }
+  #title {
+    flex-direction: c;
+  }
+
+  #gui {
+    display: flex;
+    flex-direction: column;
+    margin-top: 0;
+    align-items: center;
+  }
+
+  #buttons button {
+    padding: 0;
+  }
+
+  #fbuttons button {
+    padding: 0;
+  }
+
+  body {
+    font-size: 16px;
+    line-height: 1;
+  }
+}
+
+@media (max-width: 960px) {
+  .f16 {
+    font-size: 0.875rem;
+  }
+  .f18 {
+    font-size: 1rem;
+  }
+  .f24 {
+    font-size: 1.25rem;
+  }
+  .f30 {
+    font-size: 1.5625rem;
+  }
+  .f36 {
+    font-size: 1.875rem;
+  }
+  .f42 {
+    font-size: 2.1875rem;
+  }
+  .f48 {
+    font-size: 2.5rem;
+  }
+  .f60 {
+    font-size: 3.125rem;
+  }
+  .f72 {
+    font-size: 3.75rem;
+  }
 }
