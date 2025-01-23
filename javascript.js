@@ -157,6 +157,7 @@ element.addEventListener("mouseover",()=>{
         let opt = document.createElement("option");
         opt.value = option;
         opt.textContent = option;
+        opt.style.fontFamily=option;
         dropdown.appendChild(opt);
     })
 
@@ -296,7 +297,7 @@ bo.addEventListener("click",()=>{
 })
 });
 
-//----------------change font name in text bodies while keeping the fontz size number------------
+//----------------change font name in text bodies while keeping the font size number------------
 telements.forEach((telement)=>{
     const childElements= telement.querySelectorAll(".p1");
     childElements.forEach((childelement)=>{
