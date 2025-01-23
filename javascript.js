@@ -167,6 +167,7 @@ element.addEventListener("mouseover",()=>{
 
 
     function fontchange (){
+        clearInterval(intervalID2);
         telements.forEach((telement)=>telement.style.fontFamily=dropdown.value);
         newfont.innerText=dropdown.value;
  };
@@ -197,7 +198,11 @@ function autofunction(){
     clearInterval(intervalID2);
         telements.forEach((telement)=>{telement.style.fontFamily=defaultFont;
         telement.style.fontStyle="normal";
-        telement.style.fontWeight="normal"})
+        telement.style.fontWeight="normal";
+    const childElements = document.querySelectorAll(".p1");
+    childElements.forEach((childElement)=>{
+        childElement.textContent="Roboto";
+    })})
         newfont.innerText=defaultFont; 
         dropdown.value="Roboto";
         });
@@ -250,6 +255,7 @@ dropdown2.addEventListener("change",()=>{
     dropdown2.value="black";
     telements.forEach(telement=>telement.style.color=dropdown2.value);
     newfontc.innerHTML=dropdown2.value.toUpperCase();
+
 });
 
 //-----------------fcauto--------------------
