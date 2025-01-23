@@ -184,6 +184,11 @@ function autofunction(){
         const fontc =["Comic Neue","Chewy","Pacifico","Fredoka One","Lobster","Caveat"];
         let fontindex = Math.floor(Math.random()*fontc.length);
         telements.forEach((telement) =>telement.style.fontFamily = fontc[fontindex]);
+        newfont.innerText=fontc[fontindex];
+        telements.forEach((telement)=>{
+            const childElement = telement.querySelectorAll(".p1");
+            childElement.forEach((child)=>child.innerHTML=fontc[fontindex])
+        })
         },1000);
 
  
@@ -265,7 +270,7 @@ fcauto.addEventListener("click",()=>{
             telement.style.color=newhexc;
         })
     
-        newfontc.innerHTML=newhexc;
+        newfontc.innerText=newhexc;
 })
 
 
@@ -283,3 +288,15 @@ bo.addEventListener("click",()=>{
        telement.style.fontWeight=telement.style.fontWeight=== "bold"? "normal":"bold";
 })
 });
+
+//----------------change font name in text bodies while keeping the fontz size number------------
+telements.forEach((telement)=>{
+    const childElements= telement.querySelectorAll(".p1");
+    childElements.forEach((childelement)=>{
+        childelement.textContent=dropdown.value;
+        dropdown.addEventListener("click",()=>{
+            childelement.textContent=dropdown.value;
+        })
+    })
+
+})
