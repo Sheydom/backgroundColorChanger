@@ -224,7 +224,7 @@ color.forEach(col => {
     let nopt = document.createElement("option");
     nopt.value = col;
     nopt.textContent = col;
-
+    nopt.style.color=col;
     dropdown2.appendChild(nopt);
     
 })
