@@ -298,7 +298,7 @@ telements.forEach((telement) => {
   const childElements = telement.querySelectorAll(".p1");
   childElements.forEach((childelement) => {
     childelement.textContent = dropdown.value;
-    dropdown.addEventListener("click", () => {
+    dropdown.addEventListener("change", () => {
       childelement.textContent = dropdown.value;
     });
   });
