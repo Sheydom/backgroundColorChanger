@@ -21,39 +21,39 @@ body {
 }
 
 .f16 {
-  font-size: 1rem; /* 16px / 16 = 1rem */
+  font-size: clamp(0.875rem, 1vw, 1rem); /* 14px to 16px */
 }
 
 .f18 {
-  font-size: 1.125rem; /* 18px / 16 = 1.125rem */
+  font-size: clamp(1rem, 1.125vw, 1.125rem); /* 16px to 18px */
 }
 
 .f24 {
-  font-size: 1.5rem; /* 24px / 16 = 1.5rem */
+  font-size: clamp(1.25rem, 1.5vw, 1.5rem); /* 20px to 24px */
 }
 
 .f30 {
-  font-size: 1.875rem; /* 30px / 16 = 1.875rem */
+  font-size: clamp(1.5625rem, 2vw, 1.875rem); /* 25px to 30px */
 }
 
 .f36 {
-  font-size: 2.25rem; /* 36px / 16 = 2.25rem */
+  font-size: clamp(1.875rem, 2.5vw, 2.25rem); /* 30px to 36px */
 }
 
 .f42 {
-  font-size: 2.625rem; /* 42px / 16 = 2.625rem */
+  font-size: clamp(2.1875rem, 3vw, 2.625rem); /* 35px to 42px */
 }
 
 .f48 {
-  font-size: 3rem; /* 48px / 16 = 3rem */
+  font-size: clamp(2.5rem, 3.5vw, 3rem); /* 40px to 48px */
 }
 
 .f60 {
-  font-size: 3.75rem; /* 60px / 16 = 3.75rem */
+  font-size: clamp(3.125rem, 4.5vw, 3.75rem); /* 50px to 60px */
 }
 
 .f72 {
-  font-size: 4.5rem; /* 72px / 16 = 4.5rem */
+  font-size: clamp(3.75rem, 6vw, 4.5rem); /* 60px to 72px */
 }
 
 #colorbody {
@@ -221,7 +221,7 @@ body {
 
 @media (max-width: 960px) {
   #title {
-    flex-direction: c;
+    flex-direction:column ;
   }
 
   #gui {
@@ -246,31 +246,10 @@ body {
 }
 
 @media (max-width: 960px) {
-  .f16 {
-    font-size: 0.875rem;
+  #rbody{
+    margin-top: 10px;
   }
-  .f18 {
-    font-size: 1rem;
-  }
-  .f24 {
-    font-size: 1.25rem;
-  }
-  .f30 {
-    font-size: 1.5625rem;
-  }
-  .f36 {
-    font-size: 1.875rem;
-  }
-  .f42 {
-    font-size: 2.1875rem;
-  }
-  .f48 {
-    font-size: 2.5rem;
-  }
-  .f60 {
-    font-size: 3.125rem;
-  }
-  .f72 {
-    font-size: 3.75rem;
+  #lbody{
+    display: none;
   }
 }
