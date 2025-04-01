@@ -1,0 +1,29 @@
+{
+  "name": "backgroundcolorchanger",
+  "version": "1.0.0",
+  "description": "https://sheydom.github.io/backgroundColorChanger/",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "parcel build index.html"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Sheydom/backgroundColorChanger.git"
+  },
+  "author": "Dominic",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Sheydom/backgroundColorChanger/issues"
+  },
+  "homepage": "https://github.com/Sheydom/backgroundColorChanger#readme",
+  "devDependencies": {
+    "chai": "^5.2.0",
+    "del": "^7.1.0",
+    "gulp": "^5.0.0",
+    "gulp-cli": "^3.0.0",
+    "gulp-shell": "^0.8.0",
+    "mocha": "^11.1.0",
+    "parcel": "^2.14.4"
+  }
+}
