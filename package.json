@@ -21,6 +21,7 @@
   "homepage": "https://github.com/Sheydom/backgroundColorChanger#readme",
   "devDependencies": {
     "chai": "^5.2.0",
+    "cypress": "^14.2.1",
     "del": "^7.1.0",
     "gulp": "^5.0.0",
     "gulp-cli": "^3.0.0",
