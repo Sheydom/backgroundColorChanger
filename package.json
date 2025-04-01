@@ -4,8 +4,10 @@
   "description": "https://sheydom.github.io/backgroundColorChanger/",
   "type": "module",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "parcel build index.html"
+    "clean": "rimraf dist",
+    "build": "gulp build",
+    "serve": "gulp serve",
+    "test": "gulp test"
   },
   "repository": {
     "type": "git",
@@ -24,6 +26,7 @@
     "gulp-cli": "^3.0.0",
     "gulp-shell": "^0.8.0",
     "mocha": "^11.1.0",
-    "parcel": "^2.14.4"
+    "parcel": "^2.14.4",
+    "rimraf": "^6.0.1"
   }
 }
